@@ -1,11 +1,17 @@
 package com.person.person.service;
 import com.person.person.model.Person;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 import com.person.person.dao.PersonDao;
 
+@Service
 public class PersonService {
 
     private final PersonDao personDao;
-    public PersonService(PersonDao personDao){
+    @Autowired
+    public PersonService(@Qualifier("fakeDao") PersonDao personDao){
         this.personDao=personDao;
     }
 

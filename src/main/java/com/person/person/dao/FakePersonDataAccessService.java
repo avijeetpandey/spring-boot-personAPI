@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import com.person.person.model.Person;
 
+import org.springframework.stereotype.Repository;
+
+@Repository("fakeDao")
 public class FakePersonDataAccessService implements PersonDao {
 
     //fake list
